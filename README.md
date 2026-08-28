@@ -5,7 +5,7 @@ some hack tools
 
 | Tool | Location | Description |
 |------|----------|-------------|
-| hex_sid_to_string | `hex_sid_to_string.py` | Convert a binary/hex SID to the standard string format (`S-1-5-21-...`) |
+| hex_sid_to_string | `hex-sid-to-string/` | Convert a binary/hex SID to the standard string format (`S-1-5-21-...`) |
 | LDAP Sensitive Attribute Scanner | `ldap-sensitive-scanner/` | Scan LDAP (AD) for user objects with sensitive attributes |
 | KerHash | `kerhash/` | Kerberos RC4 NTLM hash spray tool (uses Impacket `getTGT.py`) |
 
@@ -14,8 +14,10 @@ some hack tools
 ### hex_sid_to_string
 
 ```bash
-python hex_sid_to_string.py 0x010500000000000515000000...
+python hex-sid-to-string/hex_sid_to_string.py 0x010500000000000515000000...
 ```
+
+See [hex-sid-to-string/README.md](hex-sid-to-string/README.md) for details.
 
 ### LDAP Sensitive Attribute Scanner
 
