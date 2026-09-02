@@ -1,0 +1,6 @@
+# 匿名共享（带空格）
+10.10.10.103,Department Shares,guest,
+10.10.10.103,Public Share,,
+
+# 认证共享
+10.10.10.104,Private,admin,pass123

@@ -8,6 +8,7 @@ some hack tools
 | hex_sid_to_string | `hex-sid-to-string/` | Convert a binary/hex SID to the standard string format (`S-1-5-21-...`) |
 | LDAP Sensitive Attribute Scanner | `ldap-sensitive-scanner/` | Scan LDAP (AD) for user objects with sensitive attributes |
 | KerHash | `kerhash/` | Kerberos RC4 NTLM hash spray tool (uses Impacket `getTGT.py`) |
+| SMB Write Tester | `smb-write-tester/` | Recursively find writable directories on SMB shares without mounting (`smbclient`) |
 
 ## Usage
 
@@ -36,3 +37,13 @@ python kerhash/KerHash.py -d htb.local -u users.txt -p hashes.txt --delay 1
 ```
 
 Valid `user:hash` combinations are appended to `valid.txt`. See [kerhash/README.md](kerhash/README.md) for details.
+
+### SMB Write Tester
+
+Requires the `smbclient` command-line tool. Input is a CSV: `IP,share,[user],[password]`.
+
+```bash
+python smb-write-tester/smb_write_tester.py smb-write-tester/example_shares.csv
+```
+
+See [smb-write-tester/README.md](smb-write-tester/README.md) for details.
